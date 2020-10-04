@@ -1,0 +1,39 @@
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+   - name: Install git
+     apt:
+       name: git
+       state: present
+       update_cache: yes
+
+   - name: Install gparted
+     apt:
+       name: gparted
+       state: present
+       update_cache: yes
+
+   - name: Install subversion
+     apt:
+       name: subversion
+       state: present
+       update_cache: yes
+
+   - name: Install emacs
+     apt:
+       name: emacs
+       state: present
+       update_cache: yes
+
+   - name: Install geany
+     apt:
+       name: geany
+       state: present
+       update_cache: yes
+
+   - name: Install ssh
+     apt:
+       name: ssh
+       state: present
+       update_cache: yes
